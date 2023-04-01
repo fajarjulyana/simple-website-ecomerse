@@ -1,0 +1,31 @@
+{
+  "name": "simple-website-ecomerse",
+  "version": "1.0.0",
+  "description": "Coming soon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fajarjulyana/simple-website-ecomerse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fajarjulyana/simple-website-ecomerse/issues"
+  },
+  "homepage": "https://github.com/fajarjulyana/simple-website-ecomerse#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongodb-session": "^3.1.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.15.0",
+    "mongoose": "^7.0.3",
+    "nodemailer": "^6.9.1"
+  }
+}

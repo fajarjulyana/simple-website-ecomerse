@@ -1,0 +1,39 @@
+<%- include('../includes/head.ejs', {
+  pageTitle: 'Your Orders',
+  pageDescription: 'Your orders page description.'
+}) %>
+
+<main class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <% if (orders.length > 0) { %>
+        <h1>Your Orders</h1>
+        <hr>
+        <ul class="list-group">
+          <% orders.forEach(order => { %>
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-md-6">
+                  <% order.products.forEach(product => { %>
+                    <p><%- product.product.title %> - <%- product.quantity %>x</p>
+                  <% }) %>
+                </div>
+                <div class="col-md-6">
+                  <p>Ordered on: <%= order.createdAt.toDateString() %></p>
+                  <p>Total Price: $<%= order.products.reduce((acc, cur) => acc + cur.quantity * cur.product.price, 0) %></p>
+                </div>
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <div class="text-center">
+          <p>You haven't placed any orders yet.</p>
+          <a href="/" class="btn btn-primary">Start Shopping</a>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</main>
+
+<%- include('../includes/footer.ejs') %>
