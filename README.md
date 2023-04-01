@@ -1,2 +1,3 @@
 # simple-website-ecomerse
-Coming soon
+
+not completely 
